@@ -1,0 +1,19 @@
+@url = http://localhost:9999
+###
+
+# @name auth
+
+POST {{url}}/api/auth
+Content-Type: application/json
+
+{
+      "login":"Vasya",
+      "password":"secret"
+}
+
+###
+
+@token = {{auth.response.body.token}}
+
+  GET {{url}}/api/me
+  Authorization: Bearer {{token}}
