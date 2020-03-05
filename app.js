@@ -96,5 +96,5 @@ server.delete("/api/media/:id", (req, res) => {
     res.send();
   }, 5000);
 });
-
-server.listen(9999);
+const port = process.env.PORT || 9999;
+server.listen(port);

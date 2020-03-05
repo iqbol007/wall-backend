@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm i",
     "start": "nodemon app.js"
   },
   "keywords": [],
@@ -21,5 +22,8 @@
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
     "uuid": "^7.0.1"
+  },
+  "engines": {
+    "node": "10"
   }
 }
